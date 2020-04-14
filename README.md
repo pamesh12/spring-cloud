@@ -1,5 +1,3 @@
-# Sample Java projects
-
 ### [Spring Cloud](./spring-cloud)
    Project based on **Spring Boot** and **Spring Cloud** framework. It has a working example to demonstrate usage of different components of Spring Cloud as listed below.
 * **Spring Config Server** - Server to store the config for all the applications.
