@@ -1,4 +1,5 @@
-### [Spring Cloud](./spring-cloud)
+# Spring Cloud
+
    Project based on **Spring Boot** and **Spring Cloud** framework. It has a working example to demonstrate usage of different components of Spring Cloud as listed below.
 * **Spring Config Server** - Server to store the config for all the applications.
 * **Spring Cloud API Gateway** - API Gateway Server.
