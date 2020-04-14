@@ -3,8 +3,8 @@
    Project based on **Spring Boot** and **Spring Cloud** framework.
    
 * [Spring Config Server](./spring-config-server) - Server to store the config for all the applications.
-* [Spring Discovery Server](./spring-discovery-server) - API Gateway Server.
-* [Spring Gateway Server](./spring-gateway) - (High Availability setup) - Discovery server for all the applications to register itself to.
+* [Spring Discovery Server](./spring-discovery-server) - (High Availability setup) - Discovery server for all the applications to register itself to.  
+* [Spring Gateway Server](./spring-gateway) - Spring API Gateway Server.  
 * [Spring Rest](./spring-rest) - Sample Rest API backend.
 * **docker compose** file is also provided to deploy this setup on container environment
 * **Spring Bus Kafka** - Spring Bus Kafka is used to communicate properties change to all the modules at runtime. 
