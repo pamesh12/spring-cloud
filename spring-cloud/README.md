@@ -1,10 +1,10 @@
 
 Link to modules in the application.
 
-* [Spring Config Server](./spring-config-server)
-* [Spring Discovery Server](./spring-discovery-server)
-* [Spring Gateway Server](./spring-gateway)
-* [Spring Rest](./spring-rest)
+* [Spring Config Server](./spring-config-server) - Server to store the config for all the applications.
+* [Spring Discovery Server](./spring-discovery-server) - API Gateway Server.
+* [Spring Gateway Server](./spring-gateway) - (High Availability setup) - Discovery server for all the applications to register itself to.
+* [Spring Rest](./spring-rest) - Sample Rest API backend.
 
 All these modules can be deployed to **docker** using compose file. 
 1.  **.env file** - Default environment file for docker compose. This file allows you to declare environment variables for your containers. Properties defined in this file will be used to replace placeholders defined in docker-compose file.
