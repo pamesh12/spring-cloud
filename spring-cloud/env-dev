@@ -1,0 +1,4 @@
+config_server_port=8001
+discovery_server_master_port=8101
+discovery_server_replica_port=8102
+#config.url=http://${config_server_name}:${config_server_port}

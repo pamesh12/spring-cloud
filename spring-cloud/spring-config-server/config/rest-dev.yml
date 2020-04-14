@@ -1,0 +1,6 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${discovery.client.url:http://localhost:8101/eureka/,http://localhost:8102/eureka/}
+rest:
+  greeting: Hello Pamesh

@@ -1,0 +1,70 @@
+version: '3.7'
+x-discovery-client-url: 
+  &clienturl
+  discovery.client.url=http://${discovery_server_replica_name}:$${discovery_server_replica_port}/eureka/,http://${discovery_server_master_name}:$${discovery_server_master_port}/eureka/
+x-config-url:
+  &configurl
+  config.url=http://${config_server_name}:$${config_server_port}  
+services:
+    spring-config:
+        env_file:
+          - 'env-dev'
+        environment:
+            - spring.profiles.active=dev
+            - server.port=$${config_server_port}
+        expose:
+          - "8001"
+        volumes:
+          - "E:/GitRepo/Java/spring-cloud/spring-config-server/config:/app/config"
+    spring-rest:
+        env_file:
+          - env-dev
+        environment:
+            - *clienturl
+            - spring.profiles.active=dev
+            - server.port=8005
+            - *configurl
+        expose:
+          - "8005"    
+        depends_on:
+            - ${config_server_name}
+            - ${discovery_server_master_name}  
+            - ${discovery_server_replica_name}   
+    spring-discovery-master:
+        env_file:
+          - env-dev
+        environment:
+            - spring.profiles.active=node1
+            - server.port=$${discovery_server_master_port}
+            - peer.server.url=http://${discovery_server_replica_name}:$${discovery_server_replica_port}/eureka/
+            - *configurl
+        ports:
+          - "8101:8101"    
+        depends_on:
+            - ${config_server_name}
+    spring-discovery-replica:
+        env_file:
+          - env-dev
+        ports:
+          - "8102:8102"    
+        environment:
+            - spring.profiles.active=node2
+            - server.port=$${discovery_server_replica_port}
+            - peer.server.url=http://${discovery_server_master_name}:$${discovery_server_master_port}/eureka/
+            - *configurl
+        depends_on:
+            - ${config_server_name}
+    spring-gateway:
+        env_file:
+          - env-dev
+        ports:
+          - "8003:8003"    
+        environment:
+            - spring.profiles.active=dev
+            - server.port=8003
+            - *configurl
+            - *clienturl
+        depends_on:
+            - ${config_server_name}
+            - ${discovery_server_master_name}
+            - ${discovery_server_replica_name}       

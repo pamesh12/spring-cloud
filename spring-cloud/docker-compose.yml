@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+    spring-config:
+        container_name: ${config_server_name}
+        image: '${repo}/spring-config-server:${tag}'
+        build:
+            context: ./spring-config-server
+    spring-discovery-master:
+        container_name: ${discovery_server_master_name}
+        image: '${repo}/spring-discovery:${tag}'
+        build:
+            context: ./spring-discovery-server
+        depends_on:
+            - ${config_server_name}
+    spring-discovery-replica:
+        container_name: ${discovery_server_replica_name}
+        image: '${repo}/spring-discovery:${tag}'
+        build:
+            context: ./spring-discovery-server
+    spring-gateway:
+        image: '${repo}/spring-gateway:${tag}'
+        build:
+            context: ./spring-gateway       
+    spring-rest:
+        image: '${repo}/spring-rest:${tag}'
+        build:
+            context: ./spring-rest

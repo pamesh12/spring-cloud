@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: discoveryserver
+  cloud:
+    config:
+      uri: ${config.url:http://localhost:8001}
+      name: discoveryserver

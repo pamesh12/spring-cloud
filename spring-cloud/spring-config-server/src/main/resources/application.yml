@@ -1,0 +1,29 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
+      enabled: true
+      env:
+        enabled: true
+      refresh:
+        enabled: true
+    config:
+      server:
+        native:
+          search-locations:
+          - file:///E:\\GitRepo\\Java\\spring-cloud\\spring-config-server\\config
+          #- file:./config ### For docker uncomment this line
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - bus-refresh 
+        - bus-env

@@ -1,0 +1,9 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${peer.server.url:http://localhost:8102/eureka/}
+  region: default
+  #instance:
+    #hostname: localhost
+spring:
+  profiles: node1

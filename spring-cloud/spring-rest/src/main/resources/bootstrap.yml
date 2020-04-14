@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: rest
+  cloud:
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid} 
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true  
+    config:
+      uri: ${config.url:http://localhost:8001}
+  profiles:
+    active: dev
+    
+management:
+  endpoint:
+    info:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include:
+        - bus-refresh
+        - bus-env
