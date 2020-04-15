@@ -23,7 +23,35 @@ The HTTP service has resources in the following form:
 Once the server is running, try hitting url.
 http://localhost:8001/rest/dev
 
-In response, you will get the content related to rest-dev.yml file stored in the config folder.
+In response, you will get the content of rest-dev.yml file stored in the config folder.
+
+#### Spring Cloud Bus
+
+Spring Cloud Bus links nodes of a distributed system with a lightweight message broker. This can then be used to broadcast state changes (e.g. configuration changes) or other management instructions.
+
+In this example, we have used Kafka broker. 
+
+```
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-bus-kafka</artifactId>
+</dependency>
+```        
+
+Also, enable endpoints in actuator module.
+
+```
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - bus-refresh 
+        - bus-env
+```        
+
+***Kafka Installation is required in order to run this project. If broker is not available, disable the cloud bus. To disable cloud bus, update `spring.cloud.bus.enabled=false' ***
+
 
 #### Config Client
 
