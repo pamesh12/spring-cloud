@@ -11,6 +11,11 @@ This service will use the [Config Server](../spring-config-server) to store the 
   <groupId>org.springframework.cloud</groupId>  
   <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>  
 </dependency>
+
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-config</artifactId>
+</dependency>
 ```    
 ### Start a Eureka Service Registry
 
