@@ -6,9 +6,9 @@ Simple rest application with /hello endpoint.This application will register with
 
 ```
 <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
 
 <dependency>
   <groupId>org.springframework.cloud</groupId>
@@ -85,7 +85,7 @@ In the code above, all the properties defined in `ApplicatioProperties` file wil
 
 ### Configure Gateway Service
 
-In order for gateway server to send request to REST-SERVICE, we need to add the service to gateway server. 
+In order for gateway server to send request to REST, we need to add the service to gateway server. 
 
 Navigate to `gateway-<profile>.yml` file and update it as below. 
 
@@ -97,7 +97,7 @@ spring:
     gateway:
       routes:
       - id: hello-service
-        uri: lb://REST-SERVICE
+        uri: lb://REST
         predicates:
         - Path=/hello 
 ```
