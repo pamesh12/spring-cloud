@@ -9,6 +9,6 @@ spring:
     gateway:
       routes:
       - id: hello-service
-        uri: lb://REST-SERVICE
+        uri: lb://REST
         predicates:
         - Path=/hello 

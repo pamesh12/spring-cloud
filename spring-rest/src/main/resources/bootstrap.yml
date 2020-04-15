@@ -1,6 +1,6 @@
 spring:
   application:
-    name: rest-service
+    name: rest
   cloud:
     bus:
       id: ${spring.application.name}:${spring.profiles.active}:${random.uuid} 

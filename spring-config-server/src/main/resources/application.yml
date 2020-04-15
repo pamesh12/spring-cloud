@@ -17,7 +17,8 @@ spring:
       server:
         native:
           search-locations:
-          - file:./config
+          - file:/E:/GitRepo/spring-cloud/spring-config-server/config
+          #- file:./config
 management:
   endpoints:
     web:
