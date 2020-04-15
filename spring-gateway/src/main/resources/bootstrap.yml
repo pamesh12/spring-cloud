@@ -3,6 +3,6 @@ spring:
     name: gateway
   cloud:
     config:
-      uri: ${config.url}
+      uri: ${config.url:http://localhost:8001}
   profiles:
     active: dev
