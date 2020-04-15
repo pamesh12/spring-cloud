@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: ${discovery.client.url}
+      defaultZone: ${discovery.client.url:http://localhost:8101/eureka/,http://localhost:8102/eureka/}
 server:
   port: 8003
 spring:
@@ -9,6 +9,6 @@ spring:
     gateway:
       routes:
       - id: hello-service
-        uri: lb://REST
+        uri: lb://REST-SERVICE
         predicates:
         - Path=/hello 

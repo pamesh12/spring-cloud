@@ -17,9 +17,7 @@ spring:
       server:
         native:
           search-locations:
-          - file:///E:\\GitRepo\\Java\\spring-cloud\\spring-config-server\\config
-          #- file:./config ### For docker uncomment this line
-
+          - file:./config
 management:
   endpoints:
     web:
