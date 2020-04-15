@@ -41,6 +41,15 @@ In this example, we have used Kafka broker.
 Also, enable endpoints in actuator module.
 
 ```
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
+      enabled: true
 management:
   endpoints:
     web:
