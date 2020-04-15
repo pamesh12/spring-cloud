@@ -48,7 +48,7 @@ We will be setting up 2 instances (HA) of discovery server.
 **Node1 - port 8101**  
 **Node2 - port 8102**  
 
-####### Node1
+###### Node1
  For *node1* property file name will be `discoveryserver-node1.yml`
  
  Update below properties.
@@ -66,7 +66,7 @@ spring:
   profiles: node1
 ```
 
-####### Node2
+###### Node2
  For *node2* property file name will be `discoveryserver-node2.yml`
  
  Update below properties.
