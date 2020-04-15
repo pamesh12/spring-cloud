@@ -34,8 +34,14 @@ In this example, we have used Kafka broker.
 ```
 <dependency>
     <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-config-monitor</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-bus-kafka</artifactId>
 </dependency>
+		 
 ```        
 
 Also, enable endpoints in actuator module.
