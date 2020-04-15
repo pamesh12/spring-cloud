@@ -39,8 +39,8 @@ spring:
       name: discoveryserver
 ```      
 
-#### External Configuration file in config server.
-Update the files with below naming convention, available under config folder as defined in config server.
+#### Setup External Configuration file in config server.
+Update the files with below naming convention, available under config folder as defined in config server.  
 `discoveryserver-<profile>.yml`
 
 We will be setting up 2 instances (HA) of discovery server.
