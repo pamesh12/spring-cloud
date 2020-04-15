@@ -121,3 +121,10 @@ You will notice that REST-SERVICE has registered itself on both eureka nodes.
 
 To test the endpoint hit `http://localhost:8003/hello`. Notice that we are hitting 8003 port of gateway service and not the backend rest service directly.
 
+### Test Spring Cloud Bus
+
+In order to test dynamic property update, perform below steps.
+* Update the property `rest.greeting` to a new value in rest-<profile>.yml file under config location.
+* Hit http://localhost:8003/hello again.
+* Latest updated value should be available in the response.	
+
