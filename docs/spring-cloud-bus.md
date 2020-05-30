@@ -103,7 +103,7 @@ management:
 
 ### <span id="Refresh_Scope">Refresh Scope</span>
 
-In order to get the latest config changes from server, client must annotate the beans handling the configs with `<strong><a href="https://cloud.spring.io/spring-cloud-static/spring-cloud.html#_refresh_scope" target="_blank" rel="noreferrer noopener">@RefreshScope</a></strong>` annotation.
+In order to get the latest config changes from server, client must annotate the beans handling the configs with <a href="https://cloud.spring.io/spring-cloud-static/spring-cloud.html#_refresh_scope" target="_blank" rel="noreferrer noopener">@RefreshScope</a> annotation.
 
 <pre class="brush: java; title: ; notranslate" title="">@Bean
 @ConfigurationProperties(prefix = "rest")
