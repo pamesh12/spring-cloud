@@ -1,31 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>https://pamesh12.github.io/spring-cloud/</loc>
-<priority>1.00</priority>
+  <loc>https://pamesh12.github.io/spring-cloud/</loc>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>
-https://pamesh12.github.io/spring-cloud/spring-config-server/
-</loc>
-<priority>0.80</priority>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-config-server.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>
-https://pamesh12.github.io/spring-cloud/spring-discovery-server/
-</loc>
-<priority>0.80</priority>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-config-client.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>
-https://pamesh12.github.io/spring-cloud/spring-gateway/
-</loc>
-<priority>0.80</priority>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-cloud-bus.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>
-https://pamesh12.github.io/spring-cloud/spring-rest/
-</loc>
-<priority>0.80</priority>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-discovery-server.html</loc>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-gateway.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-rest.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pamesh12.github.io/spring-cloud/spring-config-server</loc>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
