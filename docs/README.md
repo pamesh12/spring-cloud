@@ -2,12 +2,14 @@
 
    Project based on **Spring Boot** and **Spring Cloud** framework.
    
-* [Spring Config Server](./spring-config-server) - Server to store the config for all the applications.
-* [Spring Discovery Server](./spring-discovery-server) - (High Availability setup) - Discovery server for all the applications to register itself to.  
-* [Spring Gateway Server](./spring-gateway) - Spring API Gateway Server.  
-* [Spring Rest](./spring-rest) - Sample Rest API backend.
+* [Spring Config Server](./spring-config-server.md) - Server to store the config for all the applications.
+* [Spring Config Client](./spring-config-client.md) - Client configuration to utilize Config Server.
+* [Spring Cloud Bus](./spring-cloud-bus.md) - Spring Cloud Bus to refresh properties updated in Config server at runtime.
+* [Spring Discovery Server](./spring-discovery-server.md) - (High Availability setup) - Discovery server for all the applications to register itself to.  
+* [Spring Gateway Server](./spring-gateway.md) - Spring API Gateway Server.  
+* [Spring Rest](./spring-rest.md) - Sample Rest API backend.
+
 * **docker compose** file is also provided to deploy this setup on container environment
-* **Spring Bus Kafka** - Spring Bus Kafka is used to communicate properties change to all the modules at runtime. 
 
 All these modules can be deployed to **docker** using compose file. 
 1.  **.env file** - Default environment file for docker compose. This file allows you to declare environment variables for your containers. Properties defined in this file will be used to replace placeholders defined in docker-compose file.

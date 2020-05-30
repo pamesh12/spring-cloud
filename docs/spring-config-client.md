@@ -1,16 +1,10 @@
----
-id: 51777
-title: Configure Spring Cloud Config Client
-date: 2020-05-08T12:41:59+05:30
-author: Pamesh Bansal
-guid: http://myblog.local/?p=51777
-permalink: /configure-config-client/
----
-In order for an Spring application to use [Spring Cloud Config Server](/spring-config-server-configure), we can build an Spring application that depends on _**spring-cloud-config-client**_ 
+## Configure Spring Cloud Config Client
+
+In order for an Spring application to use [Spring Cloud Config Server](./spring-config-server.md), we can build an Spring application that depends on _**spring-cloud-config-client**_ 
 
 ## <span id="Prerequisites"><strong>Prerequisites</strong></span>
 
-Before we begin, it&#8217;s recommended to have already completed [Configure Spring Cloud Config Server](/spring-config-server-configure). We&#8217;re going to take an existing cloud config server for this post.
+Before we begin, it&#8217;s recommended to have already completed [Configure Spring Cloud Config Server](./spring-config-server.md). We&#8217;re going to take an existing cloud config server for this post.
 
 ## <span id="Maven_Dependencies">Maven Dependencies</span>
 
@@ -73,14 +67,14 @@ public ApplicationProperties applicationProperties() {
 
 **_Let us suppose the active profile for application is dev_**.
 
-Now when the application starts, it will try to connect to config server url and read a file with name _**`rest-dev.yml`**_ or `<em><strong>rest-dev.properties</strong></em>`. _`(spring.application.name)-(spring.profiles.active)`_
+Now when the application starts, it will try to connect to config server url and read a file with name _**`rest-dev.yml`**_ or `<strong>rest-dev.properties</strong>`. _`(spring.application.name)-(spring.profiles.active)`_
 
 Hit the url  
-`<em>http://localhost:8080/hello</em>`  
+`http://localhost:8080/hello`  
   
 Response :  
 **_Hello User!!_**  
   
 The value of property `rest.greeting` is injected in the controller via config server.
 
-In the next article we will configure [Spring Cloud Bus](/configure-spring-cloud-bus). It helps in _refreshing_&nbsp;the configuration to reflect changes to the Config Server on-demand, without restarting the JVM.&nbsp;
+In the next article we will configure [Spring Cloud Bus](./spring-cloud-bus.md). It helps in _refreshing_&nbsp;the configuration to reflect changes to the Config Server on-demand, without restarting the JVM.&nbsp;
