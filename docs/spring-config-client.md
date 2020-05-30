@@ -67,10 +67,10 @@ public ApplicationProperties applicationProperties() {
 
 **_Let us suppose the active profile for application is dev_**.
 
-Now when the application starts, it will try to connect to config server url and read a file with name _**`rest-dev.yml`**_ or `<em><strong>rest-dev.properties</strong></em>`. _`(spring.application.name)-(spring.profiles.active)`_
+Now when the application starts, it will try to connect to config server url and read a file with name _**`rest-dev.yml`**_ or `<strong>rest-dev.properties</strong>`. _`(spring.application.name)-(spring.profiles.active)`_
 
 Hit the url  
-`<em>http://localhost:8080/hello</em>`  
+`http://localhost:8080/hello`  
   
 Response :  
 **_Hello User!!_**  
