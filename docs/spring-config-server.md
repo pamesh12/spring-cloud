@@ -82,4 +82,4 @@ Once the server is running, try hitting url.
 
 In response, you will get the content of rest-dev.yml file stored in the config folder.
 
-We will be configuring [Spring Config Client](/spring-config-client) and [Spring Cloud Bus](/spring-cloud-bus) next.
+We will be configuring [Spring Config Client](./spring-config-client) and [Spring Cloud Bus](./spring-cloud-bus) next.
