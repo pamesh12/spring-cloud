@@ -1,3 +1,5 @@
+## Configure Spring Config Server
+
 Spring Cloud Config provides server-side and client-side support for externalized configuration in a distributed system. With the Config Server, you have a central place to manage external properties for applications across all environments.
 
 ## <span id="Maven_Dependencies">Maven Dependencies</span>
